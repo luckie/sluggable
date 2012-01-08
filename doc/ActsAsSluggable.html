@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class ActsAsSluggable - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>test/acts_as_sluggable_test.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">MiniTest::Unit::TestCase
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-teardown">#teardown</a>
+    
+    <li><a href="#method-i-test_a_book_title_is_sluggified">#test_a_book_title_is_sluggified</a>
+    
+    <li><a href="#method-i-test_a_saved_book_title_is_sluggified">#test_a_saved_book_title_is_sluggified</a>
+    
+    <li><a href="#method-i-test_a_slug_is_not_changed_with_the_title">#test_a_slug_is_not_changed_with_the_title</a>
+    
+    <li><a href="#method-i-test_amperstand_is_converted_to_and">#test_amperstand_is_converted_to_and</a>
+    
+    <li><a href="#method-i-test_sluggify_name_as_name_slug">#test_sluggify_name_as_name_slug</a>
+    
+    <li><a href="#method-i-test_slugs_are_unique">#test_slugs_are_unique</a>
+    
+    <li><a href="#method-i-test_slugs_can_be_scoped">#test_slugs_can_be_scoped</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./MIT-LICENSE.html">MIT-LICENSE</a>
+  
+    <li class="file"><a href="./README_rdoc.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./test/dummy/Rakefile.html">Rakefile</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Sluggable.html">Sluggable</a>
+  
+    <li><a href="./Sluggable/Railtie.html">Sluggable::Railtie</a>
+  
+    <li><a href="./Sluggable/Sluggify.html">Sluggable::Sluggify</a>
+  
+    <li><a href="./Sluggable/Sluggify/ClassMethods.html">Sluggable::Sluggify::ClassMethods</a>
+  
+    <li><a href="./Dummy.html">Dummy</a>
+  
+    <li><a href="./Dummy/Application.html">Dummy::Application</a>
+  
+    <li><a href="./ActsAsSluggable.html">ActsAsSluggable</a>
+  
+    <li><a href="./AddAuthorToBooks.html">AddAuthorToBooks</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Author.html">Author</a>
+  
+    <li><a href="./AuthorTest.html">AuthorTest</a>
+  
+    <li><a href="./Book.html">Book</a>
+  
+    <li><a href="./BookTest.html">BookTest</a>
+  
+    <li><a href="./CreateAuthors.html">CreateAuthors</a>
+  
+    <li><a href="./CreateBooks.html">CreateBooks</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./SluggableTest.html">SluggableTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class ActsAsSluggable</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-teardown" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">teardown</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="teardown-source">
+            <pre><span class="ruby-comment"># File test/acts_as_sluggable_test.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">teardown</span>
+  <span class="ruby-constant">Book</span>.<span class="ruby-identifier">destroy_all</span>
+  <span class="ruby-constant">Author</span>.<span class="ruby-identifier">destroy_all</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- teardown-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- teardown-method -->
+
+    
+      <div id="method-i-test_a_book_title_is_sluggified" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_a_book_title_is_sluggified</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_a_book_title_is_sluggified-source">
+            <pre><span class="ruby-comment"># File test/acts_as_sluggable_test.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_a_book_title_is_sluggified</span>
+  <span class="ruby-identifier">book</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:title</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'The Hobbit'</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">'the-hobbit'</span>, <span class="ruby-identifier">book</span>.<span class="ruby-identifier">slug</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_a_book_title_is_sluggified-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_a_book_title_is_sluggified-method -->
+
+    
+      <div id="method-i-test_a_saved_book_title_is_sluggified" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_a_saved_book_title_is_sluggified</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_a_saved_book_title_is_sluggified-source">
+            <pre><span class="ruby-comment"># File test/acts_as_sluggable_test.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_a_saved_book_title_is_sluggified</span>
+  <span class="ruby-identifier">book</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-string">'The Hobbit'</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">'the-hobbit'</span>, <span class="ruby-identifier">book</span>.<span class="ruby-identifier">slug</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_a_saved_book_title_is_sluggified-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_a_saved_book_title_is_sluggified-method -->
+
+    
+      <div id="method-i-test_a_slug_is_not_changed_with_the_title" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_a_slug_is_not_changed_with_the_title</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_a_slug_is_not_changed_with_the_title-source">
+            <pre><span class="ruby-comment"># File test/acts_as_sluggable_test.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_a_slug_is_not_changed_with_the_title</span>
+  <span class="ruby-identifier">book</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-string">'The Hobbit'</span>)
+  <span class="ruby-identifier">book</span>.<span class="ruby-identifier">title</span> = <span class="ruby-string">'The Lord of the Rings'</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">'the-hobbit'</span>, <span class="ruby-identifier">book</span>.<span class="ruby-identifier">slug</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_a_slug_is_not_changed_with_the_title-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_a_slug_is_not_changed_with_the_title-method -->
+
+    
+      <div id="method-i-test_amperstand_is_converted_to_and" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_amperstand_is_converted_to_and</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_amperstand_is_converted_to_and-source">
+            <pre><span class="ruby-comment"># File test/acts_as_sluggable_test.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_amperstand_is_converted_to_and</span>
+  <span class="ruby-identifier">book</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-string">'Of Mice &amp; Men'</span>) 
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">'of-mice-and-men'</span>, <span class="ruby-identifier">book</span>.<span class="ruby-identifier">slug</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_amperstand_is_converted_to_and-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_amperstand_is_converted_to_and-method -->
+
+    
+      <div id="method-i-test_sluggify_name_as_name_slug" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_sluggify_name_as_name_slug</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_sluggify_name_as_name_slug-source">
+            <pre><span class="ruby-comment"># File test/acts_as_sluggable_test.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_sluggify_name_as_name_slug</span>
+  <span class="ruby-identifier">author</span> = <span class="ruby-constant">Author</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-string">'J R R Tolkein'</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">'j-r-r-tolkein'</span>, <span class="ruby-identifier">author</span>.<span class="ruby-identifier">name_slug</span>
+  <span class="ruby-identifier">refute_respond_to</span> <span class="ruby-identifier">author</span>, <span class="ruby-value">:slug</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_sluggify_name_as_name_slug-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_sluggify_name_as_name_slug-method -->
+
+    
+      <div id="method-i-test_slugs_are_unique" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_slugs_are_unique</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_slugs_are_unique-source">
+            <pre><span class="ruby-comment"># File test/acts_as_sluggable_test.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_slugs_are_unique</span>
+  <span class="ruby-constant">Book</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-string">'The Hobbit'</span>)
+  <span class="ruby-identifier">book</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-string">'The Hobbit'</span>)
+  <span class="ruby-identifier">refute</span> <span class="ruby-identifier">book</span>.<span class="ruby-identifier">valid?</span>
+  <span class="ruby-identifier">assert_includes</span> <span class="ruby-identifier">book</span>.<span class="ruby-identifier">errors</span>[<span class="ruby-value">:slug</span>], <span class="ruby-string">'has already been taken'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_slugs_are_unique-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_slugs_are_unique-method -->
+
+    
+      <div id="method-i-test_slugs_can_be_scoped" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_slugs_can_be_scoped</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_slugs_can_be_scoped-source">
+            <pre><span class="ruby-comment"># File test/acts_as_sluggable_test.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_slugs_can_be_scoped</span>
+  <span class="ruby-identifier">a1</span> = <span class="ruby-constant">Author</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-string">'Ivan the opulent'</span>)
+  <span class="ruby-identifier">a2</span> = <span class="ruby-constant">Author</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-string">'Evan Prime'</span>)
+  <span class="ruby-identifier">b2</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-string">'The Hobbit'</span>, <span class="ruby-identifier">author</span><span class="ruby-operator">:</span> <span class="ruby-identifier">a1</span>)
+  <span class="ruby-identifier">b2</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-string">'The Hobbit'</span>, <span class="ruby-identifier">author</span><span class="ruby-operator">:</span> <span class="ruby-identifier">a2</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">b2</span>.<span class="ruby-identifier">valid?</span>, <span class="ruby-string">'scoped slug is not unique'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_slugs_can_be_scoped-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_slugs_can_be_scoped-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
