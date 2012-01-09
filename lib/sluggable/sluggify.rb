@@ -8,7 +8,7 @@ module Sluggable
     module ClassMethods
       def sluggify(attr, options={})
         slugged_attr = (options[:as] || :slug).to_s
-        scope =  options.has_key?(:scope) ? ", scope: :#{options[:scope]}" : ''
+        scope = options.has_key?(:scope) ? ", scope: :#{options[:scope]}" : ''
 
         class_eval <<-EOP
          validates_uniqueness_of :#{slugged_attr}#{scope} 
