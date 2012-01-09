@@ -12,9 +12,10 @@ module Sluggable
 
         class_eval <<-EOP
          validates_uniqueness_of :#{slugged_attr}#{scope} 
+         validates :#{slugged_attr}, slug: true
 
           def #{attr}=(value)
-            write_attribute(:#{slugged_attr}, value.gsub('&', 'and').parameterize) unless #{slugged_attr}?
+            write_attribute(:#{slugged_attr}, value.gsub('&', 'and').parameterize.gsub('_','-')) unless #{slugged_attr}?
             super
           end
         EOP

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ActsAsSluggable < MiniTest::Unit::TestCase
+class Sluggify < MiniTest::Unit::TestCase
 
   def teardown
     Book.destroy_all
@@ -47,6 +47,24 @@ class ActsAsSluggable < MiniTest::Unit::TestCase
     b2 = Book.create!(title: 'The Hobbit', author: a1)
     b2 = Book.new(title: 'The Hobbit', author: a2)
     assert b2.valid?, 'scoped slug is not unique'
+  end
+
+  def test_slugs_only_take_numbers_lettters_and_hyphens
+    book = Book.new(title: 'Easy Street 123', slug: '_Easy ST-2345')
+    refute book.valid?
+    assert_includes book.errors[:slug], 'can only contain letters, numbers, and hyphens'
+  end
+
+  def test_slugs_cannot_start_with_hyphen
+    book = Book.new(title: 'Easy Street 123', slug: '-Easy-ST-2345')
+    refute book.valid?
+    assert_includes book.errors[:slug], 'can not start with a hyphen'
+  end
+
+  def test_slugs_cannot_start_with_hyphen
+    book = Book.new(title: 'Easy Street 123', slug: 'Easy-ST-2345-')
+    refute book.valid?
+    assert_includes book.errors[:slug], 'can not end with a hyphen'
   end
 
 end
